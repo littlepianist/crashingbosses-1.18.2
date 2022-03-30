@@ -15,6 +15,10 @@ public class ModItems {
     public static final RegistryObject<Item> FIREY_INGOT = ITEMS.register("firey_ingot",
             () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
+    public static final RegistryObject<Item> FIREY_NUGGET = ITEMS.register("firey_nugget",
+            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
