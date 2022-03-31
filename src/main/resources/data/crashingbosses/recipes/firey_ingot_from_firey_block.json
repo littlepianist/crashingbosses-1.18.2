@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "firey_ingot",
+  "ingredients": [
+    {
+      "item": "crashingbosses:firey_block"
+    }
+  ],
+  "result": {
+    "item": "crashingbosses:firey_ingot",
+    "count": 9
+  }
+}

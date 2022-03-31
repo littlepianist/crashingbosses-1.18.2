@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "firey_ingot",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "crashingbosses:firey_nugget"
+    }
+  },
+  "result": {
+    "item": "crashingbosses:firey_ingot"
+  }
+}
