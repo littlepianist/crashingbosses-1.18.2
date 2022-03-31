@@ -1,4 +1,8 @@
 {
   "item.crashingbosses.firey_ingot": "Firey Ingot",
-  "item.crashingbosses.firey_nugget": "Firey Nugget"
+  "item.crashingbosses.firey_nugget": "Firey Nugget",
+
+  "block.crashingbosses.firey_block": "Firey Block",
+
+  "itemGroup.crashing_bossestab": "Crashing Bosses"
 }

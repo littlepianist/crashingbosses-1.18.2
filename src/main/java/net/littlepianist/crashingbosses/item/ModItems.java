@@ -1,7 +1,6 @@
-package net.littlepianist.crashingbosses;
+package net.littlepianist.crashingbosses.item;
 
 import net.littlepianist.crashingbosses.CrashingBosses;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -13,10 +12,10 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, CrashingBosses.MOD_ID);
 
     public static final RegistryObject<Item> FIREY_INGOT = ITEMS.register("firey_ingot",
-            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.CRASHING_BOSSES_TAB)));
 
     public static final RegistryObject<Item> FIREY_NUGGET = ITEMS.register("firey_nugget",
-            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.CRASHING_BOSSES_TAB)));
 
 
 
