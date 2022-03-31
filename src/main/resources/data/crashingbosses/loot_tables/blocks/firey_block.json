@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:gold_block"
+          "name": "crashingbosses:firey_block"
         }
       ],
       "conditions": [
