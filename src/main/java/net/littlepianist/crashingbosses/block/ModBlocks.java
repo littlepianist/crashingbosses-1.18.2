@@ -1,6 +1,7 @@
 package net.littlepianist.crashingbosses.block;
 
 import net.littlepianist.crashingbosses.CrashingBosses;
+import net.littlepianist.crashingbosses.block.custom.ProtectiveBlock;
 import net.littlepianist.crashingbosses.item.ModCreativeModeTab;
 import net.littlepianist.crashingbosses.item.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -23,6 +24,10 @@ public class ModBlocks {
 public static final RegistryObject<Block> FIREY_BLOCK = registerBlock("firey_block",
         () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
                 .strength(9f).requiresCorrectToolForDrops()), ModCreativeModeTab.CRASHING_BOSSES_TAB);
+
+    public static final RegistryObject<Block> PROTECTIVE_BLOCK = registerBlock("protective_block",
+            () -> new ProtectiveBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(16f).requiresCorrectToolForDrops()), ModCreativeModeTab.CRASHING_BOSSES_TAB);
 
 
 
