@@ -1,8 +1,11 @@
 {
   "item.crashingbosses.firey_ingot": "Firey Ingot",
   "item.crashingbosses.firey_nugget": "Firey Nugget",
+  "item.crashingbosses.dowsing_rod": "Dowsing Rod",
 
   "block.crashingbosses.firey_block": "Firey Block",
 
-  "itemGroup.crashingbossestab": "Crashing Bosses"
+  "itemGroup.crashingbossestab": "Crashing Bosses",
+
+  "item.crashingbosses.dowsing_rod.no_valuables": "No Valuables Found!"
 }
