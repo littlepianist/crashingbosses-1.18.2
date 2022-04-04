@@ -9,5 +9,7 @@
 
   "itemGroup.crashingbossestab": "Crashing Bosses",
 
-  "item.crashingbosses.dowsing_rod.no_valuables": "No Valuables Found!"
+  "item.crashingbosses.dowsing_rod.no_valuables": "No Valuables Found!",
+  "tooltip.crashingbosses.dowsing_rod.tooltip.shift": "Right Click to find Valuables",
+  "tooltip.crashingbosses.dowsing_rod.tooltip": "Press §aSHIFT§r for more Information"
 }
