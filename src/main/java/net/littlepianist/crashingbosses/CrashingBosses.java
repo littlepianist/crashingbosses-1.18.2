@@ -3,6 +3,7 @@ package net.littlepianist.crashingbosses;
 import net.littlepianist.crashingbosses.block.ModBlocks;
 import net.littlepianist.crashingbosses.entity.ModEntityTypes;
 import net.littlepianist.crashingbosses.item.ModItems;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -40,6 +41,10 @@ public class CrashingBosses {
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
     }
 
+// Add to Constructor
+ModEntityTypes.register(eventBus);
 
+// add to clientSetup
+EntityRenderers.register(ModEntityTypes.NETHER_HUSK.get(), NetherHuskRenderer::new);
 }
 
