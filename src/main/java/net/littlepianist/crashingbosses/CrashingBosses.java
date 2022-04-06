@@ -1,6 +1,7 @@
 package net.littlepianist.crashingbosses;
 
 import net.littlepianist.crashingbosses.block.ModBlocks;
+import net.littlepianist.crashingbosses.entity.ModEntityTypes;
 import net.littlepianist.crashingbosses.item.ModItems;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -25,6 +26,8 @@ public class CrashingBosses {
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
 
+        ModEntityTypes.register(eventBus);
+
         eventBus.addListener(this::setup);
 
         // Register ourselves for server and other game events we are interested in
@@ -36,5 +39,7 @@ public class CrashingBosses {
         LOGGER.info("HELLO FROM PREINIT");
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
     }
+
+
 }
 
