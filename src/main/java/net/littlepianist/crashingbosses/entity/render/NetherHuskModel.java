@@ -32,4 +32,6 @@ public class NetherHuskModel<T extends NetherHuskEntity> extends ZombieModel<T> 
     public ResourceLocation getTextureLocation(NetherHuskEntity object) {
         return new ResourceLocation(CrashingBosses.MOD_ID, "textures/entity/nether_husk.png");
     }
+
+
 }

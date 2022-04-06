@@ -12,6 +12,8 @@ import net.minecraftforge.fml.common.Mod;
 @Mod.EventBusSubscriber(value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ClientHandler {
 
+
+
     private static ModelLayerLocation loc(String name) {
         return new ModelLayerLocation(CrashingBosses.res(name), name);
     }
@@ -27,6 +29,7 @@ public class ClientHandler {
 
     @SubscribeEvent
     public static void entityRenderers(EntityRenderersEvent.RegisterRenderers event) {
+
         event.registerEntityRenderer(ModRegistry.NETHER_HUSK.get(), NetherHuskRenderer::new);
 
     }

@@ -29,6 +29,7 @@ public class NetherHuskModel<T extends NetherHuskEntity> extends ZombieModel<T> 
         matrixStackIn.mulPose(Vector3f.YP.rotationDegrees(flag ? 25F : -25F));
         super.translateToHand(sideIn, matrixStackIn);
     }
+
     @Override
     public ResourceLocation getTextureLocation(NetherHuskEntity object) {
         return new ResourceLocation(CrashingBosses.MOD_ID, "textures/entity/nether_husk.png");
