@@ -2,6 +2,7 @@ package net.littlepianist.crashingbosses;
 
 import net.littlepianist.crashingbosses.block.ModBlocks;
 import net.littlepianist.crashingbosses.entity.ModEntityTypes;
+import net.littlepianist.crashingbosses.entity.ModRegistry;
 import net.littlepianist.crashingbosses.item.ModItems;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.resources.ResourceLocation;
@@ -16,7 +17,7 @@ import org.apache.logging.log4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(CrashingBosses.MOD_ID)
-public class CrashingBosses<NetherHuskRenderer> {
+public class CrashingBosses<NetherHuskRenderer, eventBus> {
     public static final String MOD_ID = "crashingbosses";
 
     // Directly reference a log4j logger.
@@ -28,7 +29,7 @@ public class CrashingBosses<NetherHuskRenderer> {
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
 
-        ModEntityTypes.register(eventBus);
+        ModRegistry.ModEntityTypes.register(eventBus);
 
         eventBus.addListener(this::setup);
 
@@ -44,9 +45,9 @@ public class CrashingBosses<NetherHuskRenderer> {
     }
 
 // Add to Constructor
-ModEntityTypes.register(eventBus);
+ModRegistry.ModEntityTypes.register(eventBus);
 
 // add to clientSetup
-EntityRenderers.register(ModEntityTypes.NETHER_HUSK.get(), NetherHuskRenderer::new);
+EntityRenderers.register(ModRegistry.ModEntityTypes.NETHER_HUSK.get(), NetherHuskRenderer::new);
 }
 

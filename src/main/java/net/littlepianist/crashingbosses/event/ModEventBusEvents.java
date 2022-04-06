@@ -10,6 +10,6 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 public class ModEventBusEvents {
     @SubscribeEvent
     public static void entityAttributeEvent(EntityAttributeCreationEvent event) {
-        event.put(ModEntityTypes.NETHER_HUSK.get(), NetherHuskEntity.setAttributes());
+        event.put(ModEntityTypes.NETHER_HUSK.get(), NetherHuskEntity.setCustomAttributes().build());
     }
 }
