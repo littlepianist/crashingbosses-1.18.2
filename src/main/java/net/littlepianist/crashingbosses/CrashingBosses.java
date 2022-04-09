@@ -1,10 +1,8 @@
 package net.littlepianist.crashingbosses;
 
 import net.littlepianist.crashingbosses.block.ModBlocks;
-import net.littlepianist.crashingbosses.entity.ModEntityTypes;
-import net.littlepianist.crashingbosses.entity.ModRegistry;
 import net.littlepianist.crashingbosses.item.ModItems;
-import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.littlepianist.crashingbosses.setup.ModRegistry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -29,12 +27,16 @@ public class CrashingBosses<NetherHuskRenderer, eventBus> {
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
 
-        ModRegistry.ModEntityTypes.register(eventBus);
+        ModRegistry.register(eventBus);
 
         eventBus.addListener(this::setup);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+    }
+
+    public static ResourceLocation res(String name) {
+        return new ResourceLocation(MOD_ID, name);
     }
 
 
@@ -43,11 +45,7 @@ public class CrashingBosses<NetherHuskRenderer, eventBus> {
         LOGGER.info("HELLO FROM PREINIT");
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
     }
-
-// Add to Constructor
-ModRegistry.ModEntityTypes.register(eventBus);
-
-// add to clientSetup
-EntityRenderers.register(ModRegistry.ModEntityTypes.NETHER_HUSK.get(), NetherHuskRenderer::new);
 }
+
+
 

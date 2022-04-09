@@ -1,19 +1,19 @@
 package net.littlepianist.crashingbosses.entity.model;
-
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Vector3f;
-import net.littlepianist.crashingbosses.CrashingBosses;
 import net.littlepianist.crashingbosses.entity.custom.NetherHuskEntity;
 import net.minecraft.client.model.ZombieModel;
 import net.minecraft.client.model.geom.ModelPart;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.util.Mth;
+import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.world.entity.HumanoidArm;
 
 public class NetherHuskModel<T extends NetherHuskEntity> extends ZombieModel<T> {
     public NetherHuskModel(ModelPart part) {
         super(part);
     }
+
+
+
 
     @Override
     public void setupAnim(T entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
@@ -30,8 +30,6 @@ public class NetherHuskModel<T extends NetherHuskEntity> extends ZombieModel<T> 
         super.translateToHand(sideIn, matrixStackIn);
     }
 
-    @Override
-    public ResourceLocation getTextureLocation(NetherHuskEntity object) {
-        return new ResourceLocation(CrashingBosses.MOD_ID, "textures/entity/nether_husk.png");
+
     }
-}
+

@@ -1,7 +1,6 @@
 package net.littlepianist.crashingbosses.setup;
 
 import net.littlepianist.crashingbosses.CrashingBosses;
-import net.littlepianist.crashingbosses.entity.ModRegistry;
 import net.littlepianist.crashingbosses.entity.model.NetherHuskModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraftforge.api.distmarker.Dist;
@@ -30,7 +29,7 @@ public class ClientHandler {
     @SubscribeEvent
     public static void entityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 
-        event.registerEntityRenderer(ModRegistry.NETHER_HUSK.get(), NetherHuskRenderer::new);
+        event.registerEntityRenderer(ModRegistry.NETHER_HUSK.get(), NetherHuskModel::new);
 
     }
 }
