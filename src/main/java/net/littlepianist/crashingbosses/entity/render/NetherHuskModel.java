@@ -19,6 +19,8 @@ import javax.naming.Context;
 
 public class NetherHuskRenderer <Type extends NetherHuskEntity> extends MobRenderer<Type, NetherHuskModel<Type>> {
 
+    static final ResourceLocation TEXTURE = new ResourceLocation(CrashingBosses.MOD_ID, "textures/entity/nether_husk.png")
+
     public NetherHuskRenderer(Context context) {
        super(context, new NetherHuskModel<>(), 0.5f);
     }
@@ -37,10 +39,8 @@ public class NetherHuskRenderer <Type extends NetherHuskEntity> extends MobRende
         matrixStackIn.mulPose(Vector3f.YP.rotationDegrees(flag ? 25F : -25F));
         super.translateToHand(sideIn, matrixStackIn);
     }
-    @Override
-    public ResourceLocation getTextureLocation(NetherHuskEntity object) {
-        return new ResourceLocation(CrashingBosses.MOD_ID, "textures/entity/nether_husk.png");
-    }
+
+
 
 
 }
