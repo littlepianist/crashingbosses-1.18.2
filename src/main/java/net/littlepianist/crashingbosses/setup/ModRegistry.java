@@ -10,20 +10,22 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import org.antlr.v4.runtime.BufferedTokenStream;
 
 
-public class ModRegistry {
+public final class EntityInit {
 
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, CrashingBosses.MOD_ID);
-    public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(ForgeRegistries.ENTITIES, CrashingBosses.MOD_ID);
+    private EntityInit() {}
+
+    public class ModRegistry {
+
+        public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, CrashingBosses.MOD_ID);
+        public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(ForgeRegistries.ENTITIES, CrashingBosses.MOD_ID);
 
 
-
-    public static void init(IEventBus bus) {
-        ITEMS.register(bus);
-        ENTITIES.register(bus);
-    }
+        public static void init(IEventBus bus) {
+            ITEMS.register(bus);
+            ENTITIES.register(bus);
+        }
 
         public static DeferredRegister<EntityType<?>> ENTITY_TYPES
                 = DeferredRegister.create(ForgeRegistries.ENTITIES, CrashingBosses.MOD_ID);
@@ -46,5 +48,5 @@ public class ModRegistry {
             ENTITY_TYPES.register(eventBus);
         }
     }
-
+}
 

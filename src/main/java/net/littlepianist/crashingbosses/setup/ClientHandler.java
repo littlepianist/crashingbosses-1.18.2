@@ -29,7 +29,7 @@ public class ClientHandler {
     @SubscribeEvent
     public static void entityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 
-        event.registerEntityRenderer(ModRegistry.NETHER_HUSK.get(), NetherHuskModel::new);
+        event.registerEntityRenderer(EntityInit.ModRegistry.NETHER_HUSK.get(), NetherHuskModel::new);
 
     }
 }

@@ -28,7 +28,7 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.CRASHING_BOSSES_TAB).food(ModFoods.NETHERGETIC_FLESH)));
 
     public static final RegistryObject<ForgeSpawnEggItem> NETHER_HUSK_SPAWN_EGG = ITEMS.register("nether_husk_spawn_egg",
-            () -> new ForgeSpawnEggItem(ModRegistry.ModEntityTypes.NETHER_HUSK, 0xFF5555, 0xFFAA00,
+            () -> new ForgeSpawnEggItem(ModRegistry.NETHER_HUSK, 0xFF5555, 0xFFAA00,
                     new Item.Properties().tab(ModCreativeModeTab.CRASHING_BOSSES_TAB)));
 
 

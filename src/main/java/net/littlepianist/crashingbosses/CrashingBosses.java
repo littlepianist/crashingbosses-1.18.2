@@ -2,7 +2,7 @@ package net.littlepianist.crashingbosses;
 
 import net.littlepianist.crashingbosses.block.ModBlocks;
 import net.littlepianist.crashingbosses.item.ModItems;
-import net.littlepianist.crashingbosses.setup.ModRegistry;
+import net.littlepianist.crashingbosses.setup.EntityInit;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -27,7 +27,7 @@ public class CrashingBosses<NetherHuskRenderer, eventBus> {
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
 
-        ModRegistry.register(eventBus);
+        EntityInit.ModRegistry.register(eventBus);
 
         eventBus.addListener(this::setup);
 

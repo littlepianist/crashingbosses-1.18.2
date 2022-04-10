@@ -4,14 +4,23 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Vector3f;
 import net.littlepianist.crashingbosses.CrashingBosses;
 import net.littlepianist.crashingbosses.entity.custom.NetherHuskEntity;
+import net.littlepianist.crashingbosses.entity.model.NetherHuskModel;
+import net.littlepianist.crashingbosses.setup.ClientHandler;
 import net.minecraft.client.model.ZombieModel;
 import net.minecraft.client.model.geom.ModelPart;
+import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import net.minecraft.client.renderer.entity.HumanoidMobRenderer;
+import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.HumanoidArm;
 
-public class NetherHuskModel<T extends NetherHuskEntity> extends ZombieModel<T> {
-    public NetherHuskModel(ModelPart part) {
-        super(part);
+import javax.naming.Context;
+
+
+public class NetherHuskRenderer <Type extends NetherHuskEntity> extends MobRenderer<Type, NetherHuskModel<Type>> {
+
+    public NetherHuskRenderer(Context context) {
+       super(context, new NetherHuskModel<>(), 0.5f);
     }
 
     @Override
