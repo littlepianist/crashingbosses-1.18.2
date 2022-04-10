@@ -19,26 +19,19 @@ import javax.naming.Context;
 
 public class NetherHuskRenderer <Type extends NetherHuskEntity> extends MobRenderer<Type, NetherHuskModel<Type>> {
 
-    static final ResourceLocation TEXTURE = new ResourceLocation(CrashingBosses.MOD_ID, "textures/entity/nether_husk.png")
+    static final ResourceLocation TEXTURE = new ResourceLocation(CrashingBosses.MOD_ID,
+            "textures/entity/nether_husk.png");
 
     public NetherHuskRenderer(Context context) {
        super(context, new NetherHuskModel<>(), 0.5f);
     }
 
     @Override
-    public void setupAnim(T entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-        super.setupAnim(entityIn, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-
-     
+    public ResourceLocation getTextureLocation(Type entity) {
+        return TEXTURE;
     }
 
-    @Override
-    public void translateToHand(HumanoidArm sideIn, PoseStack matrixStackIn) {
-        boolean flag = sideIn == HumanoidArm.LEFT;
-        matrixStackIn.translate(flag ? 0.15D : -0.15D, 0.25D, 0.075D);
-        matrixStackIn.mulPose(Vector3f.YP.rotationDegrees(flag ? 25F : -25F));
-        super.translateToHand(sideIn, matrixStackIn);
-    }
+
 
 
 
