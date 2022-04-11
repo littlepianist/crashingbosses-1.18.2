@@ -12,9 +12,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 
-public final class EntityInit {
 
-    private EntityInit() {}
 
     public class ModRegistry {
 
@@ -26,14 +24,12 @@ public final class EntityInit {
             ITEMS.register(bus);
             ENTITIES.register(bus);
         }
+        public final class EntityInit {
 
-        public static DeferredRegister<EntityType<?>> ENTITY_TYPES
-                = DeferredRegister.create(ForgeRegistries.ENTITIES, CrashingBosses.MOD_ID);
+            private EntityInit() {}
 
-        public static final RegistryObject<EntityType<NetherHuskEntity>> NETHER_HUSK =
-                ENTITY_TYPES.register("nether_husk",
-                        () -> register("nether_husk", EntityType.Builder.<NetherHuskEntity>of(NetherHuskEntity::new, MobCategory.MONSTER)
-                                .sized(0.6F, 1.96F).clientTrackingRange(8)));
+        public static final RegistryObject<EntityType<NetherHuskEntity>> NETHER_HUSK = ENTITIES.register("nether_husk",
+                        () -> EntityType.Builder.of(NetherHuskEntity::new, MobCategory.MONSTER).build());
 
         public static <T extends Entity> EntityType<T> register(String id, EntityType.Builder<T> builder, boolean sendVelocityUpdates) {
             return builder.setShouldReceiveVelocityUpdates(sendVelocityUpdates).build(id);
@@ -45,7 +41,7 @@ public final class EntityInit {
 
 
         public static void register(IEventBus eventBus) {
-            ENTITY_TYPES.register(eventBus);
+            ENTITIES.register(eventBus);
         }
     }
 }
